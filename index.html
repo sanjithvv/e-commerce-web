@@ -1,0 +1,90 @@
+<!doctype html>
+<main>
+<section id="home" class="panel">
+<h1>Welcome to MyStore</h1>
+<p>Browse products, add to wishlist, place orders, and leave reviews.</p>
+</section>
+
+
+<section id="products" class="panel">
+<h2>Products</h2>
+<div id="product-list" class="product-grid"></div>
+</section>
+
+
+<section id="comments" class="panel">
+<h2>Comments & Reviews</h2>
+<div id="comment-form">
+<textarea id="comment-text" placeholder="Write your review..." rows="3"></textarea>
+<div class="row">
+<label>Rating: <select id="rating"><option value="5">5</option><option value="4">4</option><option value="3">3</option><option value="2">2</option><option value="1">1</option></select></label>
+<button id="post-comment" class="btn">Post</button>
+</div>
+</div>
+<ul id="comment-list" class="comment-list"></ul>
+</section>
+
+
+<section id="customer-care" class="panel">
+<h2>Customer Care</h2>
+<form id="contact-form" class="card small-card">
+<input id="contact-name" placeholder="Your name" required />
+<input id="contact-email" placeholder="Email" required />
+<textarea id="contact-message" placeholder="Message" rows="4" required></textarea>
+<button type="submit" class="btn">Send</button>
+</form>
+</section>
+
+
+<section id="about" class="panel">
+<h2>About Us</h2>
+<p>Mini e-commerce portal created for Assignment 3 — demonstrates frontend features and client-side storage.</p>
+</section>
+
+
+<!-- Orders & Wishlist Views (modal-like) -->
+<aside id="side-panel" class="side-panel">
+<button id="close-side" class="close">✕</button>
+<div id="side-content"></div>
+</aside>
+</main>
+
+
+<!-- Login/Register Modal -->
+<div id="auth-modal" class="modal hidden">
+<div class="modal-card">
+<button id="close-auth" class="close">✕</button>
+<div id="auth-forms">
+<!-- Login -->
+<form id="login-form" class="auth-form">
+<h3>Login</h3>
+<input id="login-email" placeholder="Email" required />
+<input id="login-password" placeholder="Password" type="password" required />
+<div class="row">
+<button type="submit" class="btn">Login</button>
+<button id="switch-to-register" type="button" class="btn ghost">Register</button>
+</div>
+</form>
+
+
+<!-- Register -->
+<form id="register-form" class="auth-form hidden">
+<h3>Register</h3>
+<input id="reg-name" placeholder="Full name" required />
+<input id="reg-email" placeholder="Email" required />
+<input id="reg-phone" placeholder="Phone (10 digits)" required />
+<input id="reg-password" placeholder="Password (min 6 chars)" type="password" required />
+<input id="reg-password-confirm" placeholder="Confirm Password" type="password" required />
+<div class="row">
+<button type="submit" class="btn">Create Account</button>
+<button id="switch-to-login" type="button" class="btn ghost">Login</button>
+</div>
+</form>
+</div>
+</div>
+</div>
+
+
+<script src="app.js"></script>
+</body>
+</html>
